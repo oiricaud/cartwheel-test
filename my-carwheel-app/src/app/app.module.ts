@@ -13,6 +13,7 @@ import { MyAppBarComponent } from './my-app-bar/my-app-bar.component';
 import { MyTableComponent } from './my-table/my-table.component';
 import {MatTableModule} from '@angular/material';
 import {MatGridListModule} from '@angular/material';
+import {MatCardModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatGridListModule} from '@angular/material';
     MatInputModule,
     MatButtonModule,
     MatTableModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule
 
   ],
   providers: [],

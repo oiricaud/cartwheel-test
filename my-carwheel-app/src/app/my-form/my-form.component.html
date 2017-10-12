@@ -1,19 +1,11 @@
 <form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
-  <h3>Add Tasks</h3>
-  <table class="fullwidth" cellspacing="0">
-    <tr>
-      <td>
-        <md-input-container class="fullwidth">
-          <input  mdInput placeholder="Name of Task" id="taskname" [(ngModel)]="address.taskname" name="taskname">
-        </md-input-container>
-      </td>
-      <td>
-      </td>
-    </tr>
-  </table>
-
-
-  <p>
-    <button type="submit" md-raised-button>Submit</button>
-  </p>
+  <mat-card>
+    <mat-card-title>
+      Add Tasks
+    </mat-card-title>
+    <input  mdInput placeholder="Name of Task" id="taskname" [(ngModel)]="address.taskname" name="taskname">
+    <mat-card-actions>
+      <button mat-button>Submit</button>
+    </mat-card-actions>
+  </mat-card>
 </form>
