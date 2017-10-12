@@ -1,4 +1,12 @@
-.formwidth{
-  margin-left: 2%;
-  margin-right: 2%;
+.mat-button{
+  background: cornflowerblue;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
 }

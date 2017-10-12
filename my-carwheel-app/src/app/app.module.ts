@@ -14,6 +14,7 @@ import { MyTableComponent } from './my-table/my-table.component';
 import {MatTableModule} from '@angular/material';
 import {MatGridListModule} from '@angular/material';
 import {MatCardModule} from '@angular/material';
+import {MatFormFieldModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatCardModule} from '@angular/material';
     MatButtonModule,
     MatTableModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule
 
   ],
   providers: [],
