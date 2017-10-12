@@ -12,6 +12,7 @@ import { MyFormComponent } from './my-form/my-form.component';
 import { MyAppBarComponent } from './my-app-bar/my-app-bar.component';
 import { MyTableComponent } from './my-table/my-table.component';
 import {MatTableModule} from '@angular/material';
+import {MatGridListModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatTableModule} from '@angular/material';
     MatToolbarModule,
     MatInputModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    MatGridListModule
 
   ],
   providers: [],
