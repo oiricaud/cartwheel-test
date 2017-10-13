@@ -16,6 +16,7 @@ export class MyTableComponent implements OnInit {
   user = null;
   displayedColumns = ['taskName', 'startTime', 'endTime', 'duration'];
   dataSource = this.tasks;
+  headerSource = new ExampleDataSource();
   constructor(private auth: Databaseservice, public db: AngularFireDatabase) { }
   ngOnInit() {
     this.auth.getAuthState().subscribe((user) => this.user = user);
