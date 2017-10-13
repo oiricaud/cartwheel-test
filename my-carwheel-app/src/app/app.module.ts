@@ -16,6 +16,13 @@ import {MatGridListModule} from '@angular/material';
 import {MatCardModule} from '@angular/material';
 import {MatFormFieldModule} from '@angular/material';
 
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database-deprecated';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+import { Databaseservice } from './shared/databaseservice.service';
+
+import {environment} from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +32,9 @@ import {MatFormFieldModule} from '@angular/material';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase, 'cartwheel-1d3df'),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     BrowserAnimationsModule,
     FormsModule,
     MatToolbarModule,
@@ -34,9 +44,9 @@ import {MatFormFieldModule} from '@angular/material';
     MatGridListModule,
     MatCardModule,
     MatFormFieldModule
-
   ],
-  providers: [],
+  providers: [Databaseservice],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
