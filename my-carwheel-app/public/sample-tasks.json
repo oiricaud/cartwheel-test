@@ -1,0 +1,54 @@
+{ "Tasks": [{
+    "name": "Go get groceries",
+    "startTime": "8:30",
+    "endTime": "8:45",
+    "duration": "15"
+    }, {
+    "name": "Do Automata homework",
+    "startTime": "8:33",
+    "endTime": "8:34",
+    "duration": "2"
+      }, {
+    "name": "Get cofee",
+    "startTime": "8:3",
+    "endTime": "Second studio album by the English-American band, released in 1967.",
+    "duration": "3"
+  }]
+}
+
+<div class="example-container mat-elevation-z8">
+  <div *ngIf="isLoggedIn()">
+    <mat-table #table [dataSource]="dataSource" *ngFor="let task of tasks | async ">
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="taskName">
+        <mat-header-cell *matHeaderCellDef> {{task.name}} </mat-header-cell>
+        <mat-cell *matCellDef> {{task.name}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="startTime">
+        <mat-header-cell *matHeaderCellDef>{{task.startTime}} </mat-header-cell>
+        <mat-cell *matCellDef> {{task.startTime}} </mat-cell>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="endTime">
+        <mat-header-cell *matHeaderCellDef> {{task.endTime}}</mat-header-cell>
+        <mat-cell *matCellDef> {{task.endTime}} </mat-cell>
+      </ng-container>
+
+      <!-- Color Column -->
+      <ng-container matColumnDef="duration">
+        <mat-header-cell *matHeaderCellDef> {{task.duration}} </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.duration}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"> </mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+  </div>
+</div>
