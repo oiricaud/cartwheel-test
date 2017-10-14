@@ -35,6 +35,9 @@ export class MyFormComponent implements OnInit {
     this.taskValue = '';
   }
   startTimer() {
+    if (this.ticks > 0 ) {
+      this.ticks = 0;
+    }
     const timer = Observable.timer(2000, 1000);
     this.sub = timer.subscribe(t => this.tickerFunc(t));
   }

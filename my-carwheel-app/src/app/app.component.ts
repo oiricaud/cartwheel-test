@@ -17,10 +17,4 @@ export class AppComponent implements OnInit {
     this.auth.getAuthState().subscribe((user) => this.user = user);
     this.tasks = this.db.list('/Tasks');
   }
-  loginWithGoogle() {
-    this.auth.loginWithGoogle();
-  }
-  isLoggedIn() {
-    return this.auth.isLoggedIn();
-  }
 }

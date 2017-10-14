@@ -1,5 +1,4 @@
 <h1> Tasks </h1>
-<div *ngIf="isLoggedIn()">
   <div class="example-container mat-elevation-z8">
     <mat-table #table [dataSource]="headerSource">
       <!--- Note that these columns can be defined in any order.
@@ -55,7 +54,9 @@
         <mat-row *matRowDef="let row; columns: displayedColumns;"> </mat-row>
       </mat-table>
   </div>
-</div>
+
+
+<!--
 <div>
   <ng-template #loginBox>
     <div style="text-align: center">
@@ -66,5 +67,6 @@
   <div *ngIf="user?.uid; else loginBox">
     <button mat-button (click)="logout()"> Logout</button>
   </div>
-
 </div>
+
+-->
