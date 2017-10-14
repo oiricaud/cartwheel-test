@@ -10,3 +10,9 @@
 .example-full-width {
   width: 100%;
 }
+button{
+  background-color: #039be5;
+  color: white;
+  font-weight: bold;
+}
+

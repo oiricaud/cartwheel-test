@@ -9,3 +9,8 @@
   overflow: auto;
   max-height: 500px;
 }
+button{
+  background-color: #039be5;
+  color: white;
+  font-weight: bold;
+}

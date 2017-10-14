@@ -1,11 +1,13 @@
 <form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
   <mat-card>
     <mat-card-title>
-      Add Tasks
+      Add Tasks Timer: {{ ticks }}
     </mat-card-title>
     <form class="example-form">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="What tasks do you need to accomplish? e.g Go to bar" >
+        <input (click)="startTimer()" id="task"
+               required [(ngModel)]="taskValue" name="task" matInput
+               placeholder="What tasks do you need to accomplish? e.g Go to bar">
       </mat-form-field>
     </form>
     <mat-card-actions>
